@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="sn.codeur.tp_assurance_vi.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.codeur.tp_assurance_vi.HelloController">
+   <children>
+      <Label layoutX="47.0" layoutY="154.0" text="Nom client" />
+      <TableView fx:id="tab_assurances" layoutX="25.0" layoutY="297.0" prefHeight="152.0" prefWidth="637.0">
+        <columns>
+          <TableColumn fx:id="id_tab" prefWidth="94.00000190734863" text="Id" />
+          <TableColumn fx:id="nom_tab" prefWidth="230.66666412353516" text="Nom" />
+            <TableColumn fx:id="numero_tab" minWidth="0.0" prefWidth="144.66668701171875" text="Numéro" />
+            <TableColumn fx:id="montant_tab" prefWidth="203.99996948242188" text="Montant" />
+        </columns>
+      </TableView>
+      <TextField fx:id="nom_tf" layoutX="129.0" layoutY="150.0" prefHeight="25.0" prefWidth="197.0" />
+      <TextField fx:id="montant_tf" layoutX="129.0" layoutY="201.0" prefHeight="25.0" prefWidth="197.0" />
+      <Label layoutX="47.0" layoutY="255.0" text="Type" />
+      <Label layoutX="47.0" layoutY="205.0" text="Montant" />
+      <Button fx:id="ajouter_btn" layoutX="386.0" layoutY="148.0" mnemonicParsing="false" onAction="#addAssurance" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE" />
+      <Button fx:id="modifier_btn" layoutX="386.0" layoutY="200.0" mnemonicParsing="false" onAction="#editAssurance" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: gold;" text="Modifier" />
+      <Button fx:id="supprimer_btn" layoutX="386.0" layoutY="252.0" mnemonicParsing="false" onAction="#deleteAssurance" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+      <Text layoutX="271.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page Assurance">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="search_tf" layoutX="243.0" layoutY="91.0" prefHeight="25.0" prefWidth="315.0" />
+      <Label layoutX="172.0" layoutY="95.0" text="Recherche" />
+      <ComboBox fx:id="type_assurance_cb" layoutX="129.0" layoutY="251.0" prefHeight="25.0" prefWidth="197.0" />
+      <Button fx:id="choisir_btn" layoutX="505.0" layoutY="200.0" mnemonicParsing="false" onAction="#setFields" text="Choisir" />
+   </children>
+</AnchorPane>

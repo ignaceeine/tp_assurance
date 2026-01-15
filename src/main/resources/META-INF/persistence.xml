@@ -2,6 +2,7 @@
     <persistence-unit name="tpassurancePU" transaction-type="RESOURCE_LOCAL">
         <!-- Ajoutez ici toutes vos entités -->
         <class>sn.codeur.tp_assurance_vi.entity.Assurance</class>
+        <class>sn.codeur.tp_assurance_vi.entity.TypeAssurance</class>
 
 
         <properties>
