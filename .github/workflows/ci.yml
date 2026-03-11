@@ -19,7 +19,7 @@ jobs:
         run: echo "STEP2= ${{ vars.STEP2 }}"
 
       - name: Etape 3 - Build
-        run: echo "Etape 3"
+        run: echo "STEP3= ${{ secrets.STEP3 }}"
 
       - name: Etape 4 - Tests
         run: echo "Etape 4"
