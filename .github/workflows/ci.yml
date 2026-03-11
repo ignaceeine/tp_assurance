@@ -5,10 +5,27 @@ on: push
 jobs:
   init:
     runs-on: ubuntu-latest
+
+    env:
+      STEP1: "Workflow - initialisation"
+
     steps:
-      - run: echo "Etape 1 - Initialisation"
-      - run: echo "Etape 2 - Récupération du code"
-      - run: echo "Etape 3 - Build"
-      - run: echo "Etape 4 - Tests"
-      - run: echo "Etape 5 - Packaging"
-      - run: echo "Etape 6 - Fin du pipeline"
+      - name: Etape 1 - Initialisation
+        run: |
+          echo "Etape 1"
+          echo "STEP1=$STEP1"
+
+      - name: Etape 2 - Récupération du code
+        run: echo "Etape 2"
+
+      - name: Etape 3 - Build
+        run: echo "Etape 3"
+
+      - name: echo "Etape 4 - Tests"
+        run: echo "Etape 4"
+
+      - name: echo "Etape 5 - Packaging"
+        run: echo "Etape 5"
+
+      - name: echo "Etape 6 - Fin du pipeline"
+        run: echo "Etape 6"
