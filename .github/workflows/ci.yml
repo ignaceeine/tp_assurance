@@ -12,4 +12,3 @@ jobs:
       - run: echo "Etape 4 - Tests"
       - run: echo "Etape 5 - Packaging"
       - run: echo "Etape 6 - Fin du pipeline"
-      - run: echo "Complete job"
