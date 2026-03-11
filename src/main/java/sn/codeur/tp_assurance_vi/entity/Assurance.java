@@ -1,9 +1,13 @@
 package sn.codeur.tp_assurance_vi.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "assurances")
+@NoArgsConstructor
+@Data
 public class Assurance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,9 +17,6 @@ public class Assurance {
     protected double montant;
 
     private static int compteur = 0;
-
-    public Assurance() {
-    }
 
     public Assurance(String nomClient, Double montant) {
         this.nomClient = nomClient;
@@ -39,48 +40,11 @@ public class Assurance {
         return calculerPrime() * nbAnnees;
     }*/
 
-    @Override
-    public String toString() {
-        return
-                "numero='" + numero + '\'' +
-                        ", nomClient='" + nomClient + '\'' +
-                        ", montant=" + montant;
-
-    }
-
-    public double getMontant() {
-        return montant;
-    }
-
-    public String getNomClient() {
-        return nomClient;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
     public static int getNombreContrats(){
         return compteur;
     }
 
-    public int getId() {
-        return id;
-    }
+    @ManyToOne
+    private TypeAssurance typeAssurance;
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setMontant(double montant) {
-        this.montant = montant;
-    }
-
-    public void setNomClient(String nomClient) {
-        this.nomClient = nomClient;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
 }

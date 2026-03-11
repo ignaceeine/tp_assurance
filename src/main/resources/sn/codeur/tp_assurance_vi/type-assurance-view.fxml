@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.codeur.tp_assurance_vi.TypeAssuranceController">
+   <children>
+      <Text layoutX="220.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page Type Assurance">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="47.0" layoutY="95.0" text="Libellé" />
+      <TextField fx:id="libelle_tf" layoutX="129.0" layoutY="91.0" prefHeight="25.0" prefWidth="197.0" />
+      <TextField fx:id="search_tf" layoutX="243.0" layoutY="60.0" prefHeight="25.0" prefWidth="315.0" />
+      <Label layoutX="172.0" layoutY="64.0" text="Recherche" />
+      <Button fx:id="ajouter_btn" layoutX="386.0" layoutY="89.0" mnemonicParsing="false" onAction="#addTypeAssurance" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE" />
+      <Button fx:id="modifier_btn" layoutX="386.0" layoutY="125.0" mnemonicParsing="false" onAction="#editTypeAssurance" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: gold;" text="Modifier" />
+      <Button fx:id="supprimer_btn" layoutX="386.0" layoutY="161.0" mnemonicParsing="false" onAction="#deleteTypeAssurance" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE" />
+      <Button fx:id="choisir_btn" layoutX="505.0" layoutY="125.0" mnemonicParsing="false" onAction="#setFields" text="Choisir" />
+      <Button layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToAssurance" text="Page Assurance" />
+      <TableView fx:id="tab_types" layoutX="25.0" layoutY="200.0" prefHeight="180.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="id_tab" prefWidth="100.0" text="Id" />
+          <TableColumn fx:id="libelle_tab" prefWidth="450.0" text="Libellé" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

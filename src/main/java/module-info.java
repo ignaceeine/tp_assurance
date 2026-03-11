@@ -3,6 +3,7 @@ module sn.codeur.tp_assurance_vi {
     requires javafx.fxml;
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
+    requires static lombok;
 
 
     opens sn.codeur.tp_assurance_vi to javafx.fxml;

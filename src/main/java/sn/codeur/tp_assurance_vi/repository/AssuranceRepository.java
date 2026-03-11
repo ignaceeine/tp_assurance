@@ -9,12 +9,6 @@ import sn.codeur.tp_assurance_vi.entity.Assurance;
 import sn.codeur.tp_assurance_vi.repository.interfaceRepo.IInterface;
 import sn.codeur.tp_assurance_vi.utils.JpaUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
-
 public class AssuranceRepository implements IInterface<Assurance> {
 
     private EntityManager entityManager;
@@ -29,7 +23,6 @@ public class AssuranceRepository implements IInterface<Assurance> {
         entityManager.getTransaction().begin();
         entityManager.persist(assurance);
         entityManager.getTransaction().commit();
-
     }
 
     @Override
