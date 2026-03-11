@@ -6,9 +6,9 @@ jobs:
   init:
     runs-on: ubuntu-latest
     steps:
-      - run: "Etape 1 - Initialisation"
-      - run: "Etape 2 - Récupération du code"
-      - run: "Etape 3 - Build"
-      - run: "Etape 4 - Tests"
-      - run: "Etape 5 - Packaging"
-      - run: "Etape 6 - Fin du pipeline"
+      - run: echo "Etape 1 - Initialisation"
+      - run: echo "Etape 2 - Récupération du code"
+      - run: echo "Etape 3 - Build"
+      - run: echo "Etape 4 - Tests"
+      - run: echo "Etape 5 - Packaging"
+      - run: echo "Etape 6 - Fin du pipeline"
