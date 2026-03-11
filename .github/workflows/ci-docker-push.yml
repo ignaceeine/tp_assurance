@@ -26,10 +26,10 @@ jobs:
         run: |
           docker build -t $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
 
-      # - name: Test de l’image Docker
-      #   run: |
-      #     docker image ls $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+      - name: Test de l’image Docker
+        run: |
+          docker image ls $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
 
-      # - name: Push de l’image Docker
-      #   run: |
-      #     docker push $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+      - name: Push de l’image Docker
+        run: |
+          docker push $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
