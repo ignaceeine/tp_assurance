@@ -21,11 +21,11 @@ jobs:
       - name: Etape 3 - Build
         run: echo "Etape 3"
 
-      - name: echo "Etape 4 - Tests"
+      - name: Etape 4 - Tests
         run: echo "Etape 4"
 
-      - name: echo "Etape 5 - Packaging"
+      - name: Etape 5 - Packaging
         run: echo "Etape 5"
 
-      - name: echo "Etape 6 - Fin du pipeline"
+      - name: Etape 6 - Fin du pipeline
         run: echo "Etape 6"
