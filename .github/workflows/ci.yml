@@ -29,3 +29,9 @@ jobs:
 
       - name: Etape 6 - Fin du pipeline
         run: echo "Etape 6"
+
+  eine-job:
+    runs-on: self-hosted
+    steps:
+      - name: Etape 1 - Initialisation
+        run: echo "$(hostname)"
