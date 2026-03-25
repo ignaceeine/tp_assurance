@@ -33,3 +33,13 @@ jobs:
       - name: Push de l’image Docker
         run: |
           docker push $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'ignaceeine/tp-assurance:latest'
+          format: 'table'
+          severity: 'CRITICAL,HIGH, MEDIUM'
+          exit-code: '1'
+          vuln-type: 'os,library'
+          ignore-unfixed: true
