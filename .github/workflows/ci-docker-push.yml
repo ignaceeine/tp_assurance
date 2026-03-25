@@ -39,7 +39,7 @@ jobs:
         with:
           image-ref: 'ignaceeine/tp-assurance:latest'
           format: 'table'
-          severity: 'CRITICAL,HIGH, MEDIUM'
+          severity: CRITICAL,HIGH, MEDIUM
           exit-code: '1'
           vuln-type: 'os,library'
           ignore-unfixed: true
